@@ -7,23 +7,42 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
   <header class="header">
-   <div class="container">
+   <div class="container header__container">
     <a href="index.html" class="header__logo">
-      <img src="img/logo.svg" alt="Логотип компании Second Hand" class="header__logo-img" height="112" width="42"> 
+      <img src="img/logo.svg" alt="Логотип компании Second Hand" class="header__logo-img" width="112" height="42"> 
     </a>
 
     <nav class="navigation header__navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item"><a href="?category=women" class="navigation__link">Женщинам</a></li>
-        <li class="navigation__item"><a href="?category=men" class="navigation__link">Мужчинам</a></li>
-        <li class="navigation__item"><a href="?category=kids" class="navigation__link">Детям</a></li>
-      </ul>
+      <button class="navigation__btn">
+        <span class="navigation__btn_line">Каталог</span>
+      </button>
+      
+      <div class="navigation__mobile-wrapper">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="?category=women" class="navigation__link">Женщинам</a></li>
+          <li class="navigation__item"><a href="?category=men" class="navigation__link">Мужчинам</a></li>
+          <li class="navigation__item"><a href="?category=kids" class="navigation__link">Детям</a></li>
+        </ul>
+  
+        <ul class="header__control-list navigation__control">
+          <li class="header__control-item">
+            <button class="header__btn header__btn_cart"></button>
+          </li>
+          <li class="header__control-item">
+            <a href="?list=" class="header__btn header__btn_favorite"></a>
+          </li>
+          <li class="header__control-item">
+            <a href="#" class="header__btn header__btn_person"></a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <div class="header__search">
-      <form action="#" class="search">
+      <form action="#" class="search search_active">
         <input type="search" class="search__input">
         <button class="search__button" type="button"></button>
         <button class="search__close" type="button"></button>
