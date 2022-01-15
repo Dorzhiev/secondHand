@@ -6,6 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/index.css">
+  <style>
+    .hero__slider-link_women {
+      background-image: url('img/banner-women.jpg');
+    }
+    .hero__slider-link_men {
+      background-image: url('img/banner-men.jpg');
+    }
+    .hero__slider-link_kids {
+      background-image: url('img/banner-kids.jpg');
+    }
+    @media (max-width: 1000px) {
+      .hero__slider-link_women {
+      background-image: url('img/banner-women-m.jpg');
+    }
+    .hero__slider-link_men {
+      background-image: url('img/banner-men-m.jpg');
+    }
+    .hero__slider-link_kids {
+      background-image: url('img/banner-kids-m.jpg');
+    }
+  }
+  </style>
+  <script src="scripts/index.js" type="module"></script>
 </head>
 
 <body>
@@ -42,8 +65,8 @@
     </nav>
 
     <div class="header__search">
-      <form action="#" class="search search_active">
-        <input type="search" class="search__input">
+      <form action="#" class="search">
+        <input type="search" class="search__input" required>
         <button class="search__button" type="button"></button>
         <button class="search__close" type="button"></button>
       </form>
@@ -66,25 +89,29 @@
     <main>
       <section class="hero">
         <div class="container hero__container">
-          <div class="hero__slider">
-            <ul class="hero__slider-wrapper">
-              <li class="hero__slider-item">
+          <div class="hero__slider swiper">
+            <ul class="hero__slider-wrapper swiper-wrapper">
+              <li class="hero__slider-item swiper-slide">
                 <a href="?category=women" class="hero__slider-link" 
                 style="background-image: url('img/banner-women.jpg')">
                   <h2 class="hero__slider-title">Новые поступления блузок</h2>
                 </a>
               </li>
-              <li class="hero__slider-item" hidden>
-                <a href="?category=men" class="hero__slider-link" style="background-image: url('img/banner-men.jpg')">
+              <li class="hero__slider-item swiper-slide">
+                <a href="?category=men" class="hero__slider-link" 
+                style="background-image: url('img/banner-men.jpg')">
                   <h2 class="hero__slider-title">Мужские стильные рубашки</h2>
                 </a>
               </li>
-              <li class="hero__slider-item" hidden>
-                <a href="?category=kids" class="hero__slider-link" style="background-image: url('img/banner-kids.jpg')">
+              <li class="hero__slider-item swiper-slide">
+                <a href="?category=kids" class="hero__slider-link"
+                 style="background-image: url('img/banner-kids.jpg')">
                   <h2 class="hero__slider-title">Собираем ребенка в&nbsp;школу</h2>
                 </a>
               </li>
             </ul>
+
+            <div class="hero__slider-pagination"></div>
           </div>
         </div>
       </section>
