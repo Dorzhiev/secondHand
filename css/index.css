@@ -9,3 +9,8 @@
 @import 'modules/goods.css';
 @import 'modules/item.css';
 @import 'modules/footer.css';
+@import 'modules/to-cart.css';
+@import 'modules/overlay.css';
+@import 'modules/modal-item.css';
+@import 'modules/modal-cart.css';
+@import 'modules/props.css';
